@@ -4,12 +4,6 @@
 source "util.m"
 source "pdu.m"
 
-# Load variable from file
-function data = load_var(file, var)
-	temp = load(file, var);
-	data = temp.(var);
-endfunction
-
 # Main function
 function main()
 	var = "advertising_data_unknown";

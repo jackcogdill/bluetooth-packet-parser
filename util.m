@@ -1,3 +1,9 @@
+# Load variable from file
+function data = load_var(file, var)
+	temp = load(file, var);
+	data = temp.(var);
+endfunction
+
 # Reshape 1xN matrix into rows of 8
 function octets = octify(A)
 	len = size(A)(2);
