@@ -6,8 +6,7 @@ end
 
 % Reshape 1xN matrix into rows of 8
 function octets = octify(A)
-	len = size(A)(2);
-	num_octets = len / 8; % Numer of octets
+	num_octets = length(A) / 8; % Numer of octets
 	octets = zeros(num_octets, 8);
 
 	% Group data by octet
@@ -39,11 +38,10 @@ function n = mat2dec(A)
 end
 
 function R = hex(A)
-	len = size(A)(2);
 	R = '';
 
 	i = 1;
-	while i < len
+	while i < length(A)
 		quartet = A(1, i:i+3);
 		quartet = mat2dec(quartet);
 		quartet = dec2hex(quartet);

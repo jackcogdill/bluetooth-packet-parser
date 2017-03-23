@@ -1,4 +1,10 @@
 function out = whiten(in, chan)
+	narginchk (1,2);
+
+	if (nargin < 2)
+		chan = 37;
+	end
+
 	chan = dec2bin(chan);
 	bits = length(chan);
 
@@ -10,11 +16,9 @@ function out = whiten(in, chan)
 		j++;
 	end
 
-	len = size(in)(2);
-	out = zeros(1, len);
-
+	out = zeros(1, length(in));
 	tmp = zeros(1, 7);
-	for i = 1:len
+	for i = 1:length(in)
 		tmp(1) = reg(7);
 		tmp(2) = reg(1);
 		tmp(3) = reg(2);

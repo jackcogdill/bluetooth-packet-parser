@@ -2,9 +2,8 @@ function out = gen_crc(in)
 	x55 = [0, 1, 0, 1, 0, 1, 0, 1];
 	reg = horzcat(x55, x55, x55);
 	reg = fliplr(reg);
-	len = size(in)(2);
 
-	for i = 1:len
+	for i = 1:length(in)
 		x = xor(reg(24), in(i));
 		reg = shift(reg, 1);
 
