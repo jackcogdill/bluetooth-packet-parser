@@ -2,7 +2,9 @@
 
 ## About
 
-This bluetooth packet parser is written in [Octave](https://www.gnu.org/software/octave/) (an open source clone of Matlab) for security research at the [Hume Center](http://hume.vt.edu/) at Virginia Tech.
+This bluetooth packet parser is written in [Octave](https://www.gnu.org/software/octave/)<sup>1</sup>for security research at the [Hume Center](http://hume.vt.edu/) at Virginia Tech.  
+
+<sup>1</sup>An open source clone of Matlab
 
 ## Usage
 
