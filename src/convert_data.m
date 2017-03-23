@@ -1,4 +1,5 @@
 #! /usr/bin/octave -qf
+cd(fileparts(mfilename('fullpath')))
 
 # Includes
 source "util.m"
