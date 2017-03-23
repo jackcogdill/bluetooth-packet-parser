@@ -9,7 +9,7 @@ function main()
 	var = "advertising_data_unknown";
 	printf("Data for %s:\n", var);
 
-	data = load_var("frames.mat", var);
+	data = load_var("../data/frames.mat", var);
 	data = octify(data);
 	len = size(data)(1);
 
@@ -27,7 +27,7 @@ function main()
 	# De-whiten pdu and crc
 	pdu_crc = data(6:len, :);
 	pdu_crc = deoctify(pdu_crc);
-	channel = load_var("frames.mat", "channel");
+	channel = load_var("../data/frames.mat", "channel");
 	pdu_crc = whiten(pdu_crc, channel);
 
 	pdu_crc_data = octify(pdu_crc);
