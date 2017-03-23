@@ -1,9 +1,8 @@
 #! /usr/bin/octave -qf
-cd(fileparts(mfilename('fullpath')))
+cd(fileparts(mfilename('fullpath')));
 
 % Includes
-source 'util.m'
-source 'parse.m'
+addpath('util');
 
 data = load_var('../data/demodded_str.mat', 'str_data');
 

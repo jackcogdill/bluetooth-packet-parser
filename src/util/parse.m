@@ -1,10 +1,3 @@
-#! /usr/bin/octave -qf
-cd(fileparts(mfilename('fullpath')))
-
-% Includes
-source 'util.m'
-source 'pdu.m'
-
 % Parse bluetooth packet
 function success = parse(data)
 	success = 0;
@@ -101,12 +94,4 @@ function success = parse(data)
 
 	parse_pdu(pdu_type, pdu_payload);
 	success = 1;
-end
-
-% Test function for parse
-function test()
-	var = 'advertising_data_unknown';
-	printf('Data for %s:\n', var);
-	data = load_var('../data/frames.mat', var);
-	parse(data);
 end

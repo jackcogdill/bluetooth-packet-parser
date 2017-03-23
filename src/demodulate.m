@@ -1,6 +1,8 @@
 #! /usr/bin/octave -qf
-cd(fileparts(mfilename('fullpath')))
-addpath('util')
+cd(fileparts(mfilename('fullpath')));
+
+% Includes
+addpath('lib');
 
 data = read_complex_binary('../data/channel37_3.dat');
 

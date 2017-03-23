@@ -1,8 +1,8 @@
 #! /usr/bin/octave -qf
-cd(fileparts(mfilename('fullpath')))
+cd(fileparts(mfilename('fullpath')));
 
 % Includes
-source 'util.m'
+addpath('util');
 
 printf('Loading data...');
 data = load_var('../data/demodded.mat', 'demod_data');
