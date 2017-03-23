@@ -6,9 +6,9 @@ function out = whiten(in, chan)
 	reg(1) = 1;
 	j = 1;
 	for i = (7-bits)+1:7
-		reg(1, i) = chan(j) - "0"; # Char to int
+		reg(1, i) = chan(j) - '0'; % Char to int
 		j++;
-	endfor
+	end
 
 	len = size(in)(2);
 	out = zeros(1, len);
@@ -25,5 +25,5 @@ function out = whiten(in, chan)
 
 		out(i) = xor(in(i), reg(7));
 		reg = tmp;
-	endfor
-endfunction
+	end
+end

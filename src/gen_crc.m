@@ -15,7 +15,7 @@ function out = gen_crc(in)
 		reg(4)  = xor(reg(4),  x);
 		reg(2)  = xor(reg(2),  x);
 		reg(1)  = x;
-	endfor
+	end
 
 	out = fliplr(reg);
-endfunction
+end
