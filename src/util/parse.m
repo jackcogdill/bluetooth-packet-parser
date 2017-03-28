@@ -43,6 +43,7 @@ function success = parse(data)
 	reserved_2  = pdu_header(2, 7:8);
 
 	pdu_type = get_pdu_type(pdu_type);
+	payload_len = fliplr(payload_len);
 	payload_len_dec = mat2dec(payload_len);
 
 	% Output
