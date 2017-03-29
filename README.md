@@ -16,4 +16,4 @@ Use `src/find_packets.m` to find the packets within the string data and parse th
 
 ## Sample output
 
-![Image](http://i.imgur.com/FZEddcM.png)
+![Image](http://i.imgur.com/c3rlYLx.png)
